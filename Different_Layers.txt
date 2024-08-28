@@ -1,0 +1,152 @@
+There are generally three entitities-----
+
+Client  ---------   Server    --------- DB
+
+server will accept and return data.
+
+server will have multiple layers
+
+controller layer   --  accept request and send data back. 
+Service layer    -- To do any kind of processing ex add two numbers . It will not interact with client nor db.
+Repository layer or DAO Layer  -- this layer interact with the db, get the db and send data back to service layer for processing.
+
+
+flow
+Server - > Controller -> Service -> Repository -> DB
+
+Tomcat jasper helps us to convert jsp to servlet
+By default spring boot dont support jsp
+Lombok help us to reduce the no of lines of code
+Lombok is a Java library that can generate known patterns of code for us, allowing us to reduce the boilerplate code
+
+for ex if we use @data in a class then we dont have to create getter and setters Same goes for constructor. 
+
+request mapping by default uses get request.
+if you want to add post request use post mapping
+
+swagger is similar to postman
+
+When u r using a controller by default it searches for a view so we have to use responsebody to tell spring that we are sending json data
+
+use restcontroller directly to avoid above scenes
+
+Change axios link to tomcst link to 8080/addjobposts and in controller add @Crossorigin(origin=http://localhost:3000)
+
+Jackson library is converting java objects to json to send
+
+For seeing data in postman in xml format we have to use a jackson dataformat xml library
+
+If we want that only our controller sends json only then in mapping produces = application/json
+similarly consumes in post method see content negotation
+
+orm tool or library will convert our java class into tables ex hibernate
+All objects will create one row and vice versa
+Hibernate implements JPA 
+Lets build for some specification and all these tools are going to implemnent that specification
+
+
+Spring Data has spring data jpa and spring data rest
+
+In our projects we are using service layer but it is generally of no use.
+so lets do it with controller and Repository
+Dependencies - Spring Data jpa, Rest repositories
+
+
+Spring HATEOAS provides some APIs to ease creating REST representations that follow the HATEOAS principle when working with Spring and especially Spring MVC
+
+Hypermedia as the engine of application state 
+
+AOP solves the problem of cross cutting concerns
+
+In service methods suppose we have to log the files of event, every time you call a function you have to log it somewhere.
+
+To seprate concerns like security, log , exceptions, validations
+
+Now we have to do inside the service controller. But it will be difficult to manage.
+So we will create a different class and these things are automatically called for every method
+
+logging refers to the process of recording or storing information or messages that help in understanding the behavior and execution of a program
+
+
+
+Authentication is verifying the true identity of a user or entity, while authorization determines what a user can access and ensures that a user or entity receives the right access or permissions in a system.
+
+Session management is the process of maintaining user sessions securely while controlling their lifecycle
+
+So, in simple terms, a SessionFactory is a special tool that helps you get sessions to work with your database, just like a car factory helps you get cars for driving.
+
+
+In summary, a session in Hibernate is a temporary environment for working with your database, allowing you to perform various operations in a controlled and efficient manner.
+
+OWASP
+
+SEE sql injection
+
+If we have one controller just add spring security and it will generate login logout page by itself
+
+In mvc spring Security filters before sipatcherServlet
+
+Multiple filters are in order and they are called filter chain , we can change the order
+
+
+In Java, the "SessionFactory" is a bit like that special machine. It's part of a framework called Hibernate, which is used to interact with databases. Here's how it works in layman terms:
+
+Your Custom Machine (SessionFactory): Just as your special machine knows how to make various items, the SessionFactory knows how to connect to your database and perform operations like saving, retrieving, and updating data.
+
+Setting It Up: Before you start making items, you need to configure your machine with the right settings and materials. Similarly, you configure the SessionFactory with information about how to connect to your database and how to handle your data.
+
+Creating Sessions (Using the Machine): Once your machine is set up, you can use it to create items. In Hibernate, you use the SessionFactory to create "sessions"—temporary, individual connections to the database where you can perform operations on your data.
+
+Efficiency and Management: Just as having a well-set-up machine makes production smoother and more efficient, using a SessionFactory helps manage database operations more efficiently and effectively.
+
+
+For changing the default username and password provided by spring security change app.prop
+
+You can use postman for the same just use Suthorization tab set value hit request
+
+Ab hume csrf token ki zrrt isliye pdi kyunki kya pta koi website humari session id lele kyunki vo cookie m hai fr koi secure reourcec acess kre
+
+CSRF - Cross site request Forgery  same working as jwt
+
+By default spring implement csrf for put update and delete
+
+Agar csrf token nhi hai toh post nhi kr paoge. Send in headers
+
+ab hum rokenge malicious websites ko humara data lene se kewal ek site policy lgake.
+We oallow only those website to take our session id for which it is created by change in app.prop
+
+Stateless - it will send username and password for every request
+statefull - same session id for every request
+
+I we make stateless then no need of all lets make it stateless
+
+User Details service is a interface that checks for username and passord in app.properties and if it is present ok otherwise manually create.
+
+
+Authentication provider will by default validate username and passwords
+
+We can have multiple providers in same app
+
+whenever we type username and password it will addeded in authentication object which will be get authenticated 
+
+
+Session Id will not work as we have multiple servers not one......so jwt comes into picture
+We can use load balancers etc so we will use jwt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

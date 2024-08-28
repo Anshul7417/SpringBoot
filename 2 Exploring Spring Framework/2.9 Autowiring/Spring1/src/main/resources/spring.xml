@@ -1,0 +1,27 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	
+	<!-- <bean id="alien1" class="com.telusko.Alien" autowire="byName"> -->
+	<bean id="alien1" class="com.telusko.Alien" autowire="byType"> 
+	
+		<property name="age" value="21"/>	
+		<!-- <property name="com" ref="com1"/>	 -->
+	
+	<!-- Now by name it will select bean having id = com -->
+	<!-- If property and autowire both are present it will execute property  -->
+	<!-- If by type --- It will search by type....if both then error -->
+
+
+	</bean>
+	
+
+	<bean id="com1" class="com.telusko.Laptop">
+	</bean> 
+	
+	<bean id="com2" class="com.telusko.Desktop">
+	</bean>
+	
+</beans>
