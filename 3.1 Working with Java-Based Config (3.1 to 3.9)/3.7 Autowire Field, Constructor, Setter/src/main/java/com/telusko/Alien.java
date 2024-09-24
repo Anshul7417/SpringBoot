@@ -42,6 +42,6 @@ public class Alien {
 
 
 	// three types of autowire
-	// Constructor, setter, field injection
+	// Constructor, setter, field injection. Write on top of these to invoke
 	
 }

@@ -22,8 +22,10 @@ public class App
 
 
         // There are many types of scope----
-        //singleton and prototype
-        // Now default is singleton means how many times you call getbean only one obj is created to change this change in spring.xml file scope prototype. now object is created only when you call getbean
+        //singleton, prototype, session and request (last 2 used in web and websockets)
+        // Now default is singleton means how many times you call getbean only one obj is created to change this change in spring.xml file scope prototype. now object is created only when you call getbean and if scope is prototype then if only one bean in spring.xml and two get bean then two objects are created.
+
+        //Singleton m applicationcontext call hote hi Object bn jata h 
     	
     }
 }

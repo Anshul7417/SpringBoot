@@ -9,7 +9,7 @@
 	<property name="age" value="21"/>		
  	<property name="com" ref="com1"/>    
 <!-- In here desktop object is created in IOC Container which is of no use. So we want to create it only when we use it first time so lazy init = true -->
-<!-- But if our eager bean is dependent on lazy bean then it will create object of lazy bean itself  -->
+<!-- But if our eager bean is dependent on lazy bean then it will create object of lazy bean itself ex ref = com2  -->
 	</bean>
 	
 

@@ -5,6 +5,7 @@
 
 	
 	<!-- <bean id="alien1" class="com.telusko.Alien" autowire="byName"> -->
+	<!-- above will search by name  -->
 	<bean id="alien1" class="com.telusko.Alien" autowire="byType"> 
 	
 		<property name="age" value="21"/>	
@@ -12,7 +13,7 @@
 	
 	<!-- Now by name it will select bean having id = com -->
 	<!-- If property and autowire both are present it will execute property  -->
-	<!-- If by type --- It will search by type....if both then error -->
+	<!-- If by type -> It will search by type....if both then error -->
 
 
 	</bean>

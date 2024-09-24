@@ -14,9 +14,9 @@ public class App
         tomcat.setPort(8080);     // change port
         
         
-        Context context=tomcat.addContext("", null);
+        Context context=tomcat.addContext("", null);                      
         Tomcat.addServlet(context,"HelloServlet",new HelloServlet());      // we can change name of servlet but on both lines
-        context.addServletMappingDecoded("/hello", "HelloServlet");
+        context.addServletMappingDecoded("/hello", "HelloServlet");        // here also
         
         tomcat.start();
         tomcat.getServer().await();

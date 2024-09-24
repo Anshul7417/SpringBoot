@@ -8,7 +8,7 @@ import com.telusko.config.AppConfig;
 public class App {
 	public static void main(String[] args) {
 
-		ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+	  ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
 	   Alien obj1 = context.getBean(Alien.class);
 	   System.out.println(obj1.getAge());

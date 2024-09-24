@@ -14,7 +14,6 @@ public class LaptopService {
 	
 	public void add(Laptop laptop) {
 		repo.save(laptop);
-		
 	}
 
 	public boolean isGoodForProg(Laptop lap) {

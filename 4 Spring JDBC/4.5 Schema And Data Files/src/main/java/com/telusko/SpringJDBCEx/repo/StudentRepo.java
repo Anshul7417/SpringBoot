@@ -12,7 +12,7 @@ import com.telusko.SpringJDBCEx.model.Student;
 @Repository
 public class StudentRepo {
 
-	private JdbcTemplate jdbc;
+	private JdbcTemplate jdbc;      //using jdbc template and resources folder
 
 	public JdbcTemplate getJdbc() {
 		return jdbc;

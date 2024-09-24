@@ -13,14 +13,13 @@
 <!--	<constructor-arg type="com.telusko.Laptop" ref="lap1"/>
 		<constructor-arg type="int" value="21"/> -->
 
-<!--  above is also good but it will give error if we g=have two int type in argument-->
+<!--  above is also good but it will give error if we have two int type in argument-->
 		
 <!--	<constructor-arg index="1" ref="lap1"/>
 		<constructor-arg index="0" value="21"/> -->
 
 <!--  above is good -->
 
-		
 		<constructor-arg name="lap" ref="lap1"/>
 		<constructor-arg name="age" value="21"/>
 <!--  above is good but it will work when in sequence only to work in any sequence use @constructor properties annotation -->

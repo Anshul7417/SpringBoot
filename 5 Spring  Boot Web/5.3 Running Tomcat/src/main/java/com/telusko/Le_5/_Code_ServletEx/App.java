@@ -10,6 +10,6 @@ public class App
         System.out.println( "Hello World!" );
         Tomcat tomcat=new Tomcat();      // It will start the server
         tomcat.start();
-        tomcat.getServer().await();
+        tomcat.getServer().await();      // wait because it is closing automatically
     }
 }

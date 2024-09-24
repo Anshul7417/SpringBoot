@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Primary
 public class Desktop implements Computer {
 
-	public  Desktop() {
+	public Desktop() {
 		System.out.println("Desktop  Object Created");
 	}
 	@Override

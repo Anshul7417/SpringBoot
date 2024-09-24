@@ -11,7 +11,7 @@ public class App
     	@SuppressWarnings("resource")             //ignore this
         ApplicationContext context = new ClassPathXmlApplicationContext();  // create a container
 //    	Alien obj = new Alien();
-    	Alien obj = (Alien) context.getBean("alien");
+    	Alien obj = (Alien) context.getBean("alien");     
     	obj.code();
 
     	

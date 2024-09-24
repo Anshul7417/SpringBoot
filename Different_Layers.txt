@@ -1,3 +1,11 @@
+Tomcat is a servlet container.
+
+JSP are converting into servlet
+
+Spring will create the objects and store it in IOC container
+
+DI is used to implement IOC
+
 There are generally three entitities-----
 
 Client  ---------   Server    --------- DB
